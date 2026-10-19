@@ -36,7 +36,7 @@ echo -e "${NC}"
 
 echo ""
 echo "1) Listen to devices"
-echo "2) devices "
+echo "2) Scan devices "
 echo "3) disconnect the device's internet"
 echo "4) exit"
 echo ""
