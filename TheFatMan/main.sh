@@ -1,5 +1,7 @@
 #!/bin/bash
 
+trap '' SIGINT
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -28,7 +30,7 @@ ___________       __     _____
  \___  /  (____  /__| \____|__  (____  /___|  / 
      \/        \/             \/     \/     \/  
 
-
+@shadowxy 
 EOF
 echo -e "${NC}"
 
@@ -54,7 +56,7 @@ if [[ "$secim" == "1" ]]; then
  clear
  
  { sudo apt update && sudo apt upgrade -y; } > /dev/null 2>&1 
- { sudo apt install bettercap; } > /dev/null 2>&1 
+ { sudo apt install bettercap && sudo apt install arp-scan -y; } > /dev/null 2>&1 
 
  clear
 
@@ -75,7 +77,7 @@ elif [[ "$secim" == "3" ]]; then
  cd "$anadizin/tool/readme"
 
  python3 -m http.server 8080 > /dev/null 2>&1 & 
-     xdg-open "http://127.0.0.1:8080" > /dev/null 2>&1 & 
+     sensible-browser "http://127.0.0.1:8080" > /dev/null 2>&1 & 
 
 
 cd "$anadizin"
