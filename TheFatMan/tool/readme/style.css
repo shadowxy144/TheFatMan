@@ -1,4 +1,4 @@
-/* Genel ayarlar */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body {
     padding: 30px;
 }
 
-/* Ana başlık */
+
 h1 {
     color: #00ff88;
     font-size: 48px;
@@ -34,7 +34,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Çizgi */
+
 hr {
     width: min(700px, 90%);
     border: none;
@@ -50,7 +50,7 @@ hr {
     margin-bottom: 30px;
 }
 
-/* Açıklama kutusu */
+
 p {
     max-width: 700px;
 
@@ -69,12 +69,12 @@ p {
         inset 0 0 20px rgba(0, 255, 136, 0.03);
 }
 
-/* Kullanıcı adı */
+
 p::first-line {
     color: #ffffff;
 }
 
-/* Mobil */
+
 @media (max-width: 600px) {
     h1 {
         font-size: 32px;
