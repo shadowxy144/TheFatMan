@@ -18,7 +18,7 @@ else
     clear
     echo "Lütfen menüdeki verileri indirin araçlar eksik"
     sleep 2
-    clear
+    break
 
 fi 
 
