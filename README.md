@@ -21,4 +21,6 @@ This repository contains a Bash-based menu interface and utility script designed
    ```bash
    git clone https://github.com/shadowxy144/TheFatMan.git
    cd TheFatMan
-   bash main.sh 
+   bash main.sh
+
+   chmod +x ./main.sh
