@@ -11,6 +11,16 @@ CYAN='\033[0;36m'
 WHITE='\033[0;37m'
 NC='\033[0m'
 
+if command -v bettercap &> /dev/null; then
+    echo ""
+
+else
+    clear
+    echo "Lütfen menüdeki verileri indirin araçlar eksik"
+    sleep 2
+    clear
+
+fi 
 
 anadizin=$(pwd)
 
@@ -75,7 +85,7 @@ read -p "What is your interface? : " face
 
 clear
 
- sudo arp-scan --interface=$face --localnet | tee "$anadizin/devices.txt" 
+ sudo arp-scan --interface="$face" --localnet | tee "$anadizin/devices.txt" 
  
 
  read -p "Enter..."
